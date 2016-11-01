@@ -1,0 +1,12 @@
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\bin\Debug\Final_Project_Butler.exe.config
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\bin\Debug\Final_Project_Butler.exe
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\bin\Debug\Final_Project_Butler.pdb
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.fmCreateFighter.resources
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.Main.resources
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.Properties.Resources.resources
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.csproj.GenerateResource.Cache
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.exe
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.pdb
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.Fight.resources
+C:\Users\Eric\Desktop\school\fall 2016\C#\Final_Project_Butler\Final_Project_Butler\obj\Debug\Final_Project_Butler.fmHistory.resources
