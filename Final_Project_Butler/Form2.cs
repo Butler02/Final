@@ -33,5 +33,17 @@ namespace Final_Project_Butler
         {
             Application.Exit();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(rbAbe.Checked==false && rbDoomsday.Checked == false && rbYoda.Checked == false)
+            {
+                lblStatus.Text = "Please Select a Charater";
+            }
+            else if (tbFighterName.Text=="")
+            {
+                lblStatus.Text = "Please Enter a name";
+            }
+        }
     }
 }

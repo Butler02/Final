@@ -43,7 +43,7 @@ namespace Final_Project_Butler
         private void Fight_Load(object sender, EventArgs e)
         {
             Random rand = new Random();
-            int pic = rand.Next(1, 6);
+            int pic = 1;
             int compic = rand.Next(1, 3);
             
             if (pic == 1)

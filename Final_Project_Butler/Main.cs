@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace Final_Project_Butler
 {
+    
     public partial class Main : Form
     {
+        public int fighter = 0;
+
         public Main()
         {
             InitializeComponent();
@@ -47,6 +50,7 @@ namespace Final_Project_Butler
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Fight fm = new Fight();
             fm.Show();
         }

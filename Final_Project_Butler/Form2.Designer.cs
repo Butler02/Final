@@ -37,17 +37,21 @@
             this.fileSelectFighterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileShowHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.rdYoda = new System.Windows.Forms.RadioButton();
-            this.rdDoomsday = new System.Windows.Forms.RadioButton();
-            this.rdAbe = new System.Windows.Forms.RadioButton();
+            this.rbYoda = new System.Windows.Forms.RadioButton();
+            this.rbDoomsday = new System.Windows.Forms.RadioButton();
+            this.rbAbe = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbFighterName
@@ -102,56 +106,56 @@
             // fileSelectFighterToolStripMenuItem
             // 
             this.fileSelectFighterToolStripMenuItem.Name = "fileSelectFighterToolStripMenuItem";
-            this.fileSelectFighterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.fileSelectFighterToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.fileSelectFighterToolStripMenuItem.Text = "Select Fighter";
             this.fileSelectFighterToolStripMenuItem.Click += new System.EventHandler(this.selectFighterToolStripMenuItem_Click);
             // 
             // fileShowHistoryToolStripMenuItem
             // 
             this.fileShowHistoryToolStripMenuItem.Name = "fileShowHistoryToolStripMenuItem";
-            this.fileShowHistoryToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.fileShowHistoryToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.fileShowHistoryToolStripMenuItem.Text = "show history";
             this.fileShowHistoryToolStripMenuItem.Click += new System.EventHandler(this.fileShowHistoryToolStripMenuItem_Click);
             // 
             // fileExit
             // 
             this.fileExit.Name = "fileExit";
-            this.fileExit.Size = new System.Drawing.Size(181, 26);
+            this.fileExit.Size = new System.Drawing.Size(174, 26);
             this.fileExit.Text = "Exit";
             this.fileExit.Click += new System.EventHandler(this.fileExit_Click);
             // 
-            // rdYoda
+            // rbYoda
             // 
-            this.rdYoda.AutoSize = true;
-            this.rdYoda.Location = new System.Drawing.Point(76, 329);
-            this.rdYoda.Name = "rdYoda";
-            this.rdYoda.Size = new System.Drawing.Size(126, 21);
-            this.rdYoda.TabIndex = 4;
-            this.rdYoda.TabStop = true;
-            this.rdYoda.Text = "Old Green Man";
-            this.rdYoda.UseVisualStyleBackColor = true;
+            this.rbYoda.AutoSize = true;
+            this.rbYoda.Location = new System.Drawing.Point(76, 329);
+            this.rbYoda.Name = "rbYoda";
+            this.rbYoda.Size = new System.Drawing.Size(126, 21);
+            this.rbYoda.TabIndex = 4;
+            this.rbYoda.TabStop = true;
+            this.rbYoda.Text = "Old Green Man";
+            this.rbYoda.UseVisualStyleBackColor = true;
             // 
-            // rdDoomsday
+            // rbDoomsday
             // 
-            this.rdDoomsday.AutoSize = true;
-            this.rdDoomsday.Location = new System.Drawing.Point(351, 329);
-            this.rdDoomsday.Name = "rdDoomsday";
-            this.rdDoomsday.Size = new System.Drawing.Size(112, 21);
-            this.rdDoomsday.TabIndex = 5;
-            this.rdDoomsday.TabStop = true;
-            this.rdDoomsday.Text = "Ugly Monster";
-            this.rdDoomsday.UseVisualStyleBackColor = true;
+            this.rbDoomsday.AutoSize = true;
+            this.rbDoomsday.Location = new System.Drawing.Point(351, 329);
+            this.rbDoomsday.Name = "rbDoomsday";
+            this.rbDoomsday.Size = new System.Drawing.Size(112, 21);
+            this.rbDoomsday.TabIndex = 5;
+            this.rbDoomsday.TabStop = true;
+            this.rbDoomsday.Text = "Ugly Monster";
+            this.rbDoomsday.UseVisualStyleBackColor = true;
             // 
-            // rdAbe
+            // rbAbe
             // 
-            this.rdAbe.AutoSize = true;
-            this.rdAbe.Location = new System.Drawing.Point(621, 329);
-            this.rdAbe.Name = "rdAbe";
-            this.rdAbe.Size = new System.Drawing.Size(125, 21);
-            this.rdAbe.TabIndex = 6;
-            this.rdAbe.TabStop = true;
-            this.rdAbe.Text = "Vampire Slayer";
-            this.rdAbe.UseVisualStyleBackColor = true;
+            this.rbAbe.AutoSize = true;
+            this.rbAbe.Location = new System.Drawing.Point(621, 329);
+            this.rbAbe.Name = "rbAbe";
+            this.rbAbe.Size = new System.Drawing.Size(125, 21);
+            this.rbAbe.TabIndex = 6;
+            this.rbAbe.TabStop = true;
+            this.rbAbe.Text = "Vampire Slayer";
+            this.rbAbe.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -192,18 +196,46 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(631, 482);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(96, 37);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Fight!";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 541);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(817, 22);
+            this.statusStrip1.TabIndex = 12;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            // 
             // fmCreateFighter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 563);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.rdAbe);
-            this.Controls.Add(this.rdDoomsday);
-            this.Controls.Add(this.rdYoda);
+            this.Controls.Add(this.rbAbe);
+            this.Controls.Add(this.rbDoomsday);
+            this.Controls.Add(this.rbYoda);
             this.Controls.Add(this.comboxElement);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbFighterName);
@@ -216,6 +248,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,12 +265,15 @@
         private System.Windows.Forms.ToolStripMenuItem fileSelectFighterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileShowHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileExit;
-        private System.Windows.Forms.RadioButton rdYoda;
-        private System.Windows.Forms.RadioButton rdDoomsday;
-        private System.Windows.Forms.RadioButton rdAbe;
+        private System.Windows.Forms.RadioButton rbYoda;
+        private System.Windows.Forms.RadioButton rbDoomsday;
+        private System.Windows.Forms.RadioButton rbAbe;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }
