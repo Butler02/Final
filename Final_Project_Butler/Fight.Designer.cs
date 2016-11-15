@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fight));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +52,9 @@
             this.pbGirl = new System.Windows.Forms.PictureBox();
             this.pbBlueGloves = new System.Windows.Forms.PictureBox();
             this.pbDoomsday = new System.Windows.Forms.PictureBox();
+            this.fighterSet = new Final_Project_Butler.FighterSet();
+            this.fightersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fightersTableAdapter = new Final_Project_Butler.FighterSetTableAdapters.FightersTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAbe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVlad)).BeginInit();
@@ -61,6 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbGirl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlueGloves)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDoomsday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fighterSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fightersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -70,7 +76,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(598, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(613, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,28 +94,28 @@
             // createFighterToolStripMenuItem
             // 
             this.createFighterToolStripMenuItem.Name = "createFighterToolStripMenuItem";
-            this.createFighterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.createFighterToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.createFighterToolStripMenuItem.Text = "Create Fighter";
             this.createFighterToolStripMenuItem.Click += new System.EventHandler(this.createFighterToolStripMenuItem_Click);
             // 
             // selectFighterToolStripMenuItem
             // 
             this.selectFighterToolStripMenuItem.Name = "selectFighterToolStripMenuItem";
-            this.selectFighterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.selectFighterToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.selectFighterToolStripMenuItem.Text = "Select Fighter";
             this.selectFighterToolStripMenuItem.Click += new System.EventHandler(this.selectFighterToolStripMenuItem_Click);
             // 
             // fightHistoryToolStripMenuItem
             // 
             this.fightHistoryToolStripMenuItem.Name = "fightHistoryToolStripMenuItem";
-            this.fightHistoryToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.fightHistoryToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.fightHistoryToolStripMenuItem.Text = "Fight History";
             this.fightHistoryToolStripMenuItem.Click += new System.EventHandler(this.fightHistoryToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -127,9 +133,9 @@
             this.lblPlayerHealth.AutoSize = true;
             this.lblPlayerHealth.Location = new System.Drawing.Point(12, 73);
             this.lblPlayerHealth.Name = "lblPlayerHealth";
-            this.lblPlayerHealth.Size = new System.Drawing.Size(86, 17);
+            this.lblPlayerHealth.Size = new System.Drawing.Size(64, 17);
             this.lblPlayerHealth.TabIndex = 2;
-            this.lblPlayerHealth.Text = "playerhealth";
+            this.lblPlayerHealth.Text = "1000000";
             // 
             // lblComputerfighter
             // 
@@ -145,9 +151,9 @@
             this.lblComputerhealth.AutoSize = true;
             this.lblComputerhealth.Location = new System.Drawing.Point(451, 73);
             this.lblComputerhealth.Name = "lblComputerhealth";
-            this.lblComputerhealth.Size = new System.Drawing.Size(142, 17);
+            this.lblComputerhealth.Size = new System.Drawing.Size(64, 17);
             this.lblComputerhealth.TabIndex = 4;
-            this.lblComputerhealth.Text = "computerfightername";
+            this.lblComputerhealth.Text = "1000000";
             // 
             // rbPunch
             // 
@@ -270,11 +276,25 @@
             this.pbDoomsday.TabIndex = 17;
             this.pbDoomsday.TabStop = false;
             // 
+            // fighterSet
+            // 
+            this.fighterSet.DataSetName = "FighterSet";
+            this.fighterSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fightersBindingSource
+            // 
+            this.fightersBindingSource.DataMember = "Fighters";
+            this.fightersBindingSource.DataSource = this.fighterSet;
+            // 
+            // fightersTableAdapter
+            // 
+            this.fightersTableAdapter.ClearBeforeFill = true;
+            // 
             // Fight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 492);
+            this.ClientSize = new System.Drawing.Size(613, 492);
             this.Controls.Add(this.pbDoomsday);
             this.Controls.Add(this.pbBlueGloves);
             this.Controls.Add(this.pbGirl);
@@ -307,6 +327,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbGirl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlueGloves)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDoomsday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fighterSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fightersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,5 +358,8 @@
         private System.Windows.Forms.PictureBox pbGirl;
         private System.Windows.Forms.PictureBox pbBlueGloves;
         private System.Windows.Forms.PictureBox pbDoomsday;
+        private FighterSet fighterSet;
+        private System.Windows.Forms.BindingSource fightersBindingSource;
+        private FighterSetTableAdapters.FightersTableAdapter fightersTableAdapter;
     }
 }

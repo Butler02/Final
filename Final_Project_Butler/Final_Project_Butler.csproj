@@ -67,6 +67,11 @@
     <Compile Include="Fight.Designer.cs">
       <DependentUpon>Fight.cs</DependentUpon>
     </Compile>
+    <Compile Include="FighterSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FighterSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="fmHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +114,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="FighterSet.xsc">
+      <DependentUpon>FighterSet.xsd</DependentUpon>
+    </None>
+    <None Include="FighterSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FighterSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FighterSet.xss">
+      <DependentUpon>FighterSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

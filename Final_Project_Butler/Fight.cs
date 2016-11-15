@@ -42,10 +42,12 @@ namespace Final_Project_Butler
 
         private void Fight_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fighterSet.Fighters' table. You can move, or remove it, as needed.
+            this.fightersTableAdapter.Fill(this.fighterSet.Fighters);
             Random rand = new Random();
-            int pic = 1;
-            int compic = rand.Next(1, 3);
-            
+            int pic=0;
+            int compic = rand.Next(1, 4);
+            pic = Main.fighter;
             if (pic == 1)
             {
                 pbAbe.Visible = true;
@@ -54,6 +56,7 @@ namespace Final_Project_Butler
                 pbGuy.Visible = false;
                 pbYoda.Visible = false;
                 pbDoomsday.Visible = false;
+
             }
             if (pic == 2)
             {
@@ -63,6 +66,8 @@ namespace Final_Project_Butler
                 pbGuy.Visible = false;
                 pbYoda.Visible = false;
                 pbDoomsday.Visible = false;
+                int fighterid = 1;
+                lblPlayerFighter.Text = fightersTableAdapter.Getname(fighterid);
             }
             if (pic == 3)
             {
@@ -72,6 +77,8 @@ namespace Final_Project_Butler
                 pbGuy.Visible = false;
                 pbYoda.Visible = false;
                 pbDoomsday.Visible = false;
+                int fighterid = 2;
+                lblPlayerFighter.Text = fightersTableAdapter.Getname(fighterid);
             }
             if (pic == 4)
             {
@@ -81,6 +88,8 @@ namespace Final_Project_Butler
                 pbGuy.Visible = true;
                 pbYoda.Visible = false;
                 pbDoomsday.Visible = false;
+                int fighterid = 3;
+                lblPlayerFighter.Text = fightersTableAdapter.Getname(fighterid);
             }
             if (pic == 5)
             {
@@ -105,18 +114,24 @@ namespace Final_Project_Butler
                 pbHillary.Visible = true;
                 pbTrump.Visible = false;
                 pbVlad.Visible = false;
+                int fighterid = 4;
+                lblComputerfighter.Text = fightersTableAdapter.Getname(fighterid);
             }
             if (compic == 2)
             {
                 pbHillary.Visible = false;
                 pbTrump.Visible = true;
                 pbVlad.Visible = false;
+                int fighterid = 5;
+                lblComputerfighter .Text = fightersTableAdapter.Getname(fighterid);
             }
             if (compic == 3)
             {
                 pbHillary.Visible = false;
                 pbTrump.Visible = false;
                 pbVlad.Visible = true;
+                int fighterid = 6;
+                lblComputerfighter.Text = fightersTableAdapter.Getname(fighterid);
             }
         }
     }

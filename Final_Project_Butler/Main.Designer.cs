@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.rbBluegloves = new System.Windows.Forms.RadioButton();
             this.rbGirl = new System.Windows.Forms.RadioButton();
@@ -42,10 +43,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fightersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fighterSet = new Final_Project_Butler.FighterSet();
+            this.fighterSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fightersTableAdapter = new Final_Project_Butler.FighterSetTableAdapters.FightersTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fightersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fighterSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fighterSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rbBluegloves
@@ -106,21 +114,21 @@
             // createFighterToolStripMenuItem
             // 
             this.createFighterToolStripMenuItem.Name = "createFighterToolStripMenuItem";
-            this.createFighterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.createFighterToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.createFighterToolStripMenuItem.Text = "Create Fighter";
             this.createFighterToolStripMenuItem.Click += new System.EventHandler(this.createFighterToolStripMenuItem_Click);
             // 
             // showHistoryToolStripMenuItem
             // 
             this.showHistoryToolStripMenuItem.Name = "showHistoryToolStripMenuItem";
-            this.showHistoryToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.showHistoryToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.showHistoryToolStripMenuItem.Text = "Show History";
             this.showHistoryToolStripMenuItem.Click += new System.EventHandler(this.showHistoryToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -174,6 +182,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // fightersBindingSource
+            // 
+            this.fightersBindingSource.DataMember = "Fighters";
+            this.fightersBindingSource.DataSource = this.fighterSet;
+            // 
+            // fighterSet
+            // 
+            this.fighterSet.DataSetName = "FighterSet";
+            this.fighterSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fighterSetBindingSource
+            // 
+            this.fighterSetBindingSource.DataSource = this.fighterSet;
+            this.fighterSetBindingSource.Position = 0;
+            // 
+            // fightersTableAdapter
+            // 
+            this.fightersTableAdapter.ClearBeforeFill = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,6 +224,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fightersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fighterSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fighterSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +247,10 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button btnCreateFighter;
         private System.Windows.Forms.Button btnFight;
+        private System.Windows.Forms.BindingSource fighterSetBindingSource;
+        private FighterSet fighterSet;
+        private System.Windows.Forms.BindingSource fightersBindingSource;
+        private FighterSetTableAdapters.FightersTableAdapter fightersTableAdapter;
     }
 }
 
