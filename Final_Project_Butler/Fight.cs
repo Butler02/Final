@@ -12,6 +12,8 @@ namespace Final_Project_Butler
 {
     public partial class Fight : Form
     {
+        double playerhp = 1000000;
+        double comphp = 1000000;
         public Fight()
         {
             InitializeComponent();
@@ -44,6 +46,8 @@ namespace Final_Project_Butler
         {
             // TODO: This line of code loads data into the 'fighterSet.Fighters' table. You can move, or remove it, as needed.
             this.fightersTableAdapter.Fill(this.fighterSet.Fighters);
+            lblPlayerHealth.Text = playerhp.ToString();
+            lblComputerhealth.Text = comphp.ToString();
             Random rand = new Random();
             int pic=0;
             int compic = rand.Next(1, 4);
@@ -134,5 +138,38 @@ namespace Final_Project_Butler
                 lblComputerfighter.Text = fightersTableAdapter.Getname(fighterid);
             }
         }
+
+        private void rbPunch_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAttack_Click(object sender, EventArgs e)
+        {
+           
+                if (rbKick.Checked == false && rbPunch.Checked == false)
+                {
+                    lblStatus.Text = "Please select if you would like to punch or kick";
+                }
+                else if (rbPunch.Checked == true)
+                {
+                    Random ran = new Random();
+                    double attack = ran.Next(20000, 100000);
+                    double newhealth = comphp - attack;
+                    comphp = newhealth;
+                    if (comphp <= 0)
+                    {
+                        lblStatus.Text = "You won!";
+                        lblComputerhealth.Text = "Dead";
+
+                    }
+                    else
+                    {
+                        lblComputerhealth.Text = comphp.ToString();
+                    }
+                   
+                }
+            }
+        }
     }
-}
+

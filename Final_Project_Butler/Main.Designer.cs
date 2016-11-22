@@ -134,9 +134,9 @@
             // 
             // btnCreateFighter
             // 
-            this.btnCreateFighter.Location = new System.Drawing.Point(242, 477);
+            this.btnCreateFighter.Location = new System.Drawing.Point(242, 466);
             this.btnCreateFighter.Name = "btnCreateFighter";
-            this.btnCreateFighter.Size = new System.Drawing.Size(127, 23);
+            this.btnCreateFighter.Size = new System.Drawing.Size(127, 34);
             this.btnCreateFighter.TabIndex = 9;
             this.btnCreateFighter.Text = "Create Fighter";
             this.btnCreateFighter.UseVisualStyleBackColor = true;
@@ -144,9 +144,9 @@
             // 
             // btnFight
             // 
-            this.btnFight.Location = new System.Drawing.Point(430, 477);
+            this.btnFight.Location = new System.Drawing.Point(430, 466);
             this.btnFight.Name = "btnFight";
-            this.btnFight.Size = new System.Drawing.Size(75, 23);
+            this.btnFight.Size = new System.Drawing.Size(75, 34);
             this.btnFight.TabIndex = 10;
             this.btnFight.Text = "Fight";
             this.btnFight.UseVisualStyleBackColor = true;

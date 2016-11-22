@@ -55,6 +55,8 @@
             this.fighterSet = new Final_Project_Butler.FighterSet();
             this.fightersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fightersTableAdapter = new Final_Project_Butler.FighterSetTableAdapters.FightersTableAdapter();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAbe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVlad)).BeginInit();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDoomsday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fighterSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fightersBindingSource)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -76,7 +79,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(613, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(677, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,36 +125,43 @@
             // lblPlayerFighter
             // 
             this.lblPlayerFighter.AutoSize = true;
-            this.lblPlayerFighter.Location = new System.Drawing.Point(12, 46);
+            this.lblPlayerFighter.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerFighter.ForeColor = System.Drawing.Color.Blue;
+            this.lblPlayerFighter.Location = new System.Drawing.Point(12, 34);
             this.lblPlayerFighter.Name = "lblPlayerFighter";
-            this.lblPlayerFighter.Size = new System.Drawing.Size(82, 17);
+            this.lblPlayerFighter.Size = new System.Drawing.Size(149, 29);
             this.lblPlayerFighter.TabIndex = 1;
             this.lblPlayerFighter.Text = "playername";
             // 
             // lblPlayerHealth
             // 
             this.lblPlayerHealth.AutoSize = true;
-            this.lblPlayerHealth.Location = new System.Drawing.Point(12, 73);
+            this.lblPlayerHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerHealth.ForeColor = System.Drawing.Color.Red;
+            this.lblPlayerHealth.Location = new System.Drawing.Point(13, 73);
             this.lblPlayerHealth.Name = "lblPlayerHealth";
-            this.lblPlayerHealth.Size = new System.Drawing.Size(64, 17);
+            this.lblPlayerHealth.Size = new System.Drawing.Size(79, 20);
             this.lblPlayerHealth.TabIndex = 2;
             this.lblPlayerHealth.Text = "1000000";
             // 
             // lblComputerfighter
             // 
             this.lblComputerfighter.AutoSize = true;
-            this.lblComputerfighter.Location = new System.Drawing.Point(451, 46);
+            this.lblComputerfighter.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComputerfighter.Location = new System.Drawing.Point(368, 34);
             this.lblComputerfighter.Name = "lblComputerfighter";
-            this.lblComputerfighter.Size = new System.Drawing.Size(109, 17);
+            this.lblComputerfighter.Size = new System.Drawing.Size(200, 29);
             this.lblComputerfighter.TabIndex = 3;
             this.lblComputerfighter.Text = "comfightername";
             // 
             // lblComputerhealth
             // 
             this.lblComputerhealth.AutoSize = true;
-            this.lblComputerhealth.Location = new System.Drawing.Point(451, 73);
+            this.lblComputerhealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComputerhealth.ForeColor = System.Drawing.Color.Red;
+            this.lblComputerhealth.Location = new System.Drawing.Point(369, 73);
             this.lblComputerhealth.Name = "lblComputerhealth";
-            this.lblComputerhealth.Size = new System.Drawing.Size(64, 17);
+            this.lblComputerhealth.Size = new System.Drawing.Size(79, 20);
             this.lblComputerhealth.TabIndex = 4;
             this.lblComputerhealth.Text = "1000000";
             // 
@@ -165,6 +175,7 @@
             this.rbPunch.TabStop = true;
             this.rbPunch.Text = "Punch";
             this.rbPunch.UseVisualStyleBackColor = true;
+            this.rbPunch.CheckedChanged += new System.EventHandler(this.rbPunch_CheckedChanged);
             // 
             // rbKick
             // 
@@ -185,6 +196,7 @@
             this.btnAttack.TabIndex = 7;
             this.btnAttack.Text = "Attack";
             this.btnAttack.UseVisualStyleBackColor = true;
+            this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
             // 
             // pbAbe
             // 
@@ -290,11 +302,28 @@
             // 
             this.fightersTableAdapter.ClearBeforeFill = true;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 468);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(677, 24);
+            this.statusStrip1.TabIndex = 18;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 19);
+            // 
             // Fight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 492);
+            this.ClientSize = new System.Drawing.Size(677, 492);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pbDoomsday);
             this.Controls.Add(this.pbBlueGloves);
             this.Controls.Add(this.pbGirl);
@@ -329,6 +358,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDoomsday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fighterSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fightersBindingSource)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +392,7 @@
         private FighterSet fighterSet;
         private System.Windows.Forms.BindingSource fightersBindingSource;
         private FighterSetTableAdapters.FightersTableAdapter fightersTableAdapter;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }
