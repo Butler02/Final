@@ -14,6 +14,7 @@ namespace Final_Project_Butler
     {
         private FighterSetTableAdapters.FightersTableAdapter adapter;
         Main mainfm = new Main();
+        public static string name = "";
         public fmCreateFighter()
         {
             InitializeComponent();
@@ -52,28 +53,32 @@ namespace Final_Project_Butler
             }
             else
             {
-                
+                name = tbFighterName.Text;
+                int charater = 0;
+                string elem = comboxElement.Text;
+                int id = 8;
+
                 try
                 {
-                    string name = tbFighterName.Text;
-                    int charater = 0;
-                    string elem = comboxElement.Text;
-                    int id = 8;
+                    
                     if (rbAbe.Checked == true)
                     {
-                        Main.fighter = charater;
                         charater = 1;
+                        Main.fighter = charater;
+                        
                     }
                     else if (rbDoomsday.Checked == true)
                     {
                         charater = 6;
+                        Main.fighter = charater;
                     }
                     else if (rbYoda.Checked== true)
                     {
                         charater = 5;
+                        Main.fighter = charater;
                     }
 
-                
+                    adapter.Update1(name, elem, charater);
                     lblStatus.Text = "Fighter Added";
 
                     Fight fm = new Fight();
