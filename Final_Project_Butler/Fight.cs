@@ -60,7 +60,8 @@ namespace Final_Project_Butler
                 pbGuy.Visible = false;
                 pbYoda.Visible = false;
                 pbDoomsday.Visible = false;
-
+                int fighterid = 7;
+                lblPlayerFighter.Text = fightersTableAdapter.Getname(fighterid);
             }
             if (pic == 2)
             {
@@ -103,6 +104,8 @@ namespace Final_Project_Butler
                 pbGuy.Visible = false;
                 pbYoda.Visible = true;
                 pbDoomsday.Visible = false;
+                int fighterid = 7;
+                lblPlayerFighter.Text = fightersTableAdapter.Getname(fighterid);
             }
             if (pic == 6)
             {
@@ -112,6 +115,8 @@ namespace Final_Project_Butler
                 pbGuy.Visible = false;
                 pbYoda.Visible = false;
                 pbDoomsday.Visible = true;
+                int fighterid = 7;
+                lblPlayerFighter.Text = fightersTableAdapter.Getname(fighterid);
             }
             if (compic == 1)
             {
