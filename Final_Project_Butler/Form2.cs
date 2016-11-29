@@ -34,7 +34,12 @@ namespace Final_Project_Butler
 
         private void fileExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Are you sure you would like to exit?", "Exit", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
