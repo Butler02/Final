@@ -76,7 +76,7 @@
             this.comboxElement.Items.AddRange(new object[] {
             "Solar",
             "Void",
-            "Arc"});
+            "Shock"});
             this.comboxElement.Location = new System.Drawing.Point(423, 489);
             this.comboxElement.Name = "comboxElement";
             this.comboxElement.Size = new System.Drawing.Size(121, 24);
@@ -211,16 +211,16 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 539);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 541);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(817, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(817, 22);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 19);
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // fmCreateFighter
             // 
@@ -243,6 +243,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fmCreateFighter";
             this.Text = "Create Fighter";
+            this.Load += new System.EventHandler(this.fmCreateFighter_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
