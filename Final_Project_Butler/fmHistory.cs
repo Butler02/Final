@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Final_Project_Butler
 {
+    
     public partial class fmHistory : Form
     {
+        
         public fmHistory()
         {
             InitializeComponent();
@@ -32,6 +34,13 @@ namespace Final_Project_Butler
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void fmHistory_Load(object sender, EventArgs e)
+        {
+            
+            List<string> hist = Fight.History;
+            lstHistory.Text = hist.ToString();
         }
     }
 }

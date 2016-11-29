@@ -70,21 +70,21 @@
             // createFighterToolStripMenuItem
             // 
             this.createFighterToolStripMenuItem.Name = "createFighterToolStripMenuItem";
-            this.createFighterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.createFighterToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.createFighterToolStripMenuItem.Text = "Create Fighter";
             this.createFighterToolStripMenuItem.Click += new System.EventHandler(this.createFighterToolStripMenuItem_Click);
             // 
             // selectFighterToolStripMenuItem
             // 
             this.selectFighterToolStripMenuItem.Name = "selectFighterToolStripMenuItem";
-            this.selectFighterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.selectFighterToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.selectFighterToolStripMenuItem.Text = "Select Fighter";
             this.selectFighterToolStripMenuItem.Click += new System.EventHandler(this.selectFighterToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -98,6 +98,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fmHistory";
             this.Text = "Fighting History";
+            this.Load += new System.EventHandler(this.fmHistory_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

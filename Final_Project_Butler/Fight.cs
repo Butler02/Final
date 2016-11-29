@@ -12,6 +12,7 @@ namespace Final_Project_Butler
 {
     public partial class Fight : Form
     {
+        public static List<string> History = new List<string>();
         double playerhp = 1000000;
         double comphp = 1000000;
         public Fight()
@@ -151,30 +152,81 @@ namespace Final_Project_Butler
 
         private void btnAttack_Click(object sender, EventArgs e)
         {
-           
-                if (rbKick.Checked == false && rbPunch.Checked == false)
+            Random ran = new Random();
+            double comAttack = ran.Next(20000, 100000);
+            string result = "";
+
+            if (rbKick.Checked == false && rbPunch.Checked == false)
                 {
                     lblStatus.Text = "Please select if you would like to punch or kick";
                 }
                 else if (rbPunch.Checked == true)
                 {
-                    Random ran = new Random();
-                    double attack = ran.Next(20000, 100000);
-                    double newhealth = comphp - attack;
+                double attack = ran.Next(20000, 100000);
+             
+                double newhealth = comphp - attack;
                     comphp = newhealth;
+                    
+                    double Playernewhealth = playerhp - comAttack;
+                    playerhp = Playernewhealth;
                     if (comphp <= 0)
                     {
                         lblStatus.Text = "You won!";
                         lblComputerhealth.Text = "Dead";
-
+                    result = "You Won!";
+                    btnAttack.Enabled = false;
+                    History.Add(result);
                     }
+                    else if (playerhp <= 0)
+                {
+                    lblStatus.Text = "You lost!";
+                    lblPlayerHealth.Text = "Dead";
+                    result = "You Lost!";
+                    btnAttack.Enabled = false;
+                    History.Add(result);
+                }
                     else
                     {
                         lblComputerhealth.Text = comphp.ToString();
+                    lblPlayerHealth.Text = playerhp.ToString();
                     }
                    
                 }
+            else if (rbKick.Checked == true)
+            {
+                double attack = ran.Next(15000, 110000);
+              
+                double newhealth = comphp - attack;
+                comphp = newhealth;
+
+                double Playernewhealth = playerhp - comAttack;
+                playerhp = Playernewhealth;
+                if (comphp <= 0)
+                {
+                    lblStatus.Text = "You won!";
+                    lblComputerhealth.Text = "Dead";
+                    result = "You Won!";
+                    btnAttack.Enabled = false;
+                    History.Add(result);
+                }
+                else if (playerhp <= 0)
+                {
+                    lblStatus.Text = "You lost!";
+                    lblPlayerHealth.Text = "Dead";
+                    result = "You Lost!";
+                    btnAttack.Enabled = false;
+                    History.Add(result);
+                }
+                else
+                {
+                    lblComputerhealth.Text = comphp.ToString();
+                    lblPlayerHealth.Text = playerhp.ToString();
+                }
+
             }
         }
+
+       
+    }
     }
 
